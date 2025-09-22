@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image">
+      <img src="images/drawers.jpg" width="280" height="285"/>
+    </div>
+    <div class="text">
+      <div class="header-text">
+        <h1>Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</h1>
+      </div>
+      <div class="paragraph-text">
+        Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I've got some simple tips 
+        to help you make any room feel complete.
+      </div>
+      <div class="avatar">
+        <div class="avatar-info">
+          <img class="avatar-image" src="images/avatar-michelle.jpg" width="40" height="40"/>
+          <div class="avatar-text">
+            <div class="avatar-name">
+              Michelle Appleton
+            </div>
+            <div class="avatar-date">
+              28 Jun 2020
+            </div>
+          </div>
+        </div>
+        <div class="avatar-button">
+          <div id="share-menu" class="hide-share">
+            <ul class="list">
+              <li class="list-item">SHARE</li>
+              <li class="list-item"><img src="images/icon-facebook.svg" alt="facebook"></li>
+              <li class="list-item"><img src="images/icon-twitter.svg" alt="twitter"></li>
+              <li class="list-item"><img src="images/icon-pinterest.svg" alt="pintrest"></li>
+            </ul>
+          </div>
+          <button id="share-button" class="share-inactive">
+            <img class="share-button-image" src="images/icon-share.svg" />
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
