@@ -10,17 +10,30 @@ body {
 }
 
 .container {
-    height: 285px; 
-    width: 730px; 
+    width: 75%;
+    max-width: 730px; 
     margin: auto;
     display: flex;
     flex-direction: row;
     background-color: white;
+
+@media screen and (max-width: 425px) {
+    flex-direction: column;        
+    }
 }
 
 .text {
-    width: 730px;
     padding: 30px 40px;
+
+    @media screen and (max-width: 425px) {
+    max-width: 100%;
+    width: auto;        
+    }
+}
+
+.image img{
+    max-width: 100%;
+    height: auto;
 }
 
 .header-text h1{
@@ -66,13 +79,50 @@ body {
     font-weight: 500;
 }
 
+.avatar-button {
+  position: relative;
+}
+
+#share-menu {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s ease-in-out;
+  position: absolute;
+  bottom: 175%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #48556a;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#share-menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#share-menu::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #48556a transparent transparent transparent;
+}
+
 .avatar-button button{
     height: 32px;
     width: 32px;
     border-radius: 100%;
     border: none;
-    padding-right: 4px;
     cursor: pointer;
+    padding: 0;
 }
 
 .hide-share {
@@ -92,13 +142,9 @@ body {
     color: hsl(212, 23%, 69%);
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    top: -60px;
-    left: -150px;
-    background-color: hsl(217, 19%, 35%);
-    padding: 18px 38px;
+    padding: 0;
+    margin: 0;
     z-index: 10;
-    text-align: center;
 }
 
 .list-item {
