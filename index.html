@@ -7,9 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Article preview component</title>
 
@@ -21,19 +18,14 @@
 </head>
 <body>
   <div class="container">
-    <div class="image">
-      <img src="images/drawers.jpg" alt="bookcase"/>
-    </div>
+      <img src="images/drawers.jpg" class="image-bookcase" alt="bookcase"/>
     <div class="text">
-      <div class="header-text">
-        <h1>Shift the overall look and feel by adding these wonderful 
-        touches to furniture in your home</h1>
-      </div>
-      <div class="paragraph-text">
-        Ever been in a room and felt like something was missing? Perhaps 
-        it felt slightly bare and uninviting. I've got some simple tips 
-        to help you make any room feel complete.
-      </div>
+      <h1>Shift the overall look and feel by adding these wonderful 
+      touches to furniture in your home</h1>
+      <p>Ever been in a room and felt like something was missing? Perhaps 
+      it felt slightly bare and uninviting. I've got some simple tips 
+      to help you make any room feel complete.</p>
+    
       <div class="avatar">
         <div class="avatar-info">
           <img class="avatar-image" src="images/avatar-michelle.jpg" width="40" height="40"/>
@@ -47,21 +39,19 @@
           </div>
         </div>
         <div class="avatar-button">
-          <div id="share-menu" class="hide-share">
-            <ul class="list">
-              <li class="list-item">SHARE</li>
-              <li class="list-item"><img src="images/icon-facebook.svg" alt="facebook"></li>
-              <li class="list-item"><img src="images/icon-twitter.svg" alt="twitter"></li>
-              <li class="list-item"><img src="images/icon-pinterest.svg" alt="pintrest"></li>
-            </ul>
-          </div>
           <button class="share-button">
             <img class="share-button-image" src="images/icon-share.svg" />
-          </button>
-
-        </div>
+          </button> 
+        </div>    
       </div>
-
+      <div class="share-menu">
+        <ul class="share-menu-list">
+          <li class="share-menu-list-item">SHARE</li>
+          <li class="share-menu-list-item"><img src="images/icon-facebook.svg" alt="facebook"></li>
+          <li class="share-menu-list-item"><img src="images/icon-twitter.svg" alt="twitter"></li>
+          <li class="share-menu-list-item"><img src="images/icon-pinterest.svg" alt="pintrest"></li>
+        </ul>
+      </div>
     </div>
   </div>
     <script src="script.js"></script>
