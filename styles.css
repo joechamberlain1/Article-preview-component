@@ -11,10 +11,13 @@
 }
 
 html body{
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: var(--grey-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -22,6 +25,13 @@ html body{
     padding: 4rem 1.5rem;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        max-width: 45rem;
+        padding: 4rem 5rem;
+
+    }
 }
 /* Image styles */
 
@@ -30,6 +40,12 @@ html body{
     height: 100%;
     object-fit: fill;
     border-radius: 0.5rem 0.5rem 0 0;
+
+        @media screen and (min-width: 768px) {
+            width: 35%;
+            height: auto;
+            border-radius: 0.5rem 0 0 0.5rem;
+    }
 }
 
 /* Text area styles */
@@ -41,6 +57,10 @@ html body{
     font-size: 0.8rem;
     color: var(--grey-900);
     border-radius: 0 0 0.5rem 0.5rem;
+
+    @media screen and (min-width: 768px) {
+            border-radius: 0 0.5rem 0.5rem 0;
+    }
 }
 
 .text h1 {
@@ -117,6 +137,31 @@ html body{
     bottom: 0;
     left: 0;
     border-radius: 0 0 0.5rem 0.5rem;
+
+        @media screen and (min-width: 768px) {
+            border-radius: 0.5rem;
+            width: 55%;
+            top: 10rem;
+            right: -3.5rem;
+            left: initial;
+            bottom: initial;
+            margin: auto;
+    }
+}
+
+.share-menu-active::after {
+    @media screen and (min-width: 768px) {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 0.625rem solid transparent; 
+        border-right: 0.625rem solid transparent; 
+        border-top: 0.625rem solid var(--grey-900);
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .share-menu-list {
@@ -124,6 +169,12 @@ html body{
     display: flex;
     align-items: center;
     padding: 1rem 1.875rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 1rem;
+        margin: 0;
+        justify-content: space-evenly;
+    }
 }
 
 .share-menu-list-item {
