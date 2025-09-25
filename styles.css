@@ -141,20 +141,20 @@ html body{
     left: 0;
     border-radius: 0 0 0.5rem 0.5rem;
 
-        @media screen and (min-width: 768px) {
-            border-radius: 0.5rem;
-            width: 55%;
-            top: 12rem;
-            right: -3.5rem;
-            left: initial;
-            bottom: initial;
-            margin: auto;
+    @media screen and (min-width: 768px) {
+        border-radius: 0.5rem;
+        width: 55%;
+        top: 12rem;
+        right: -3.5rem;
+        left: initial;
+        bottom: initial;
+        margin: auto;
     }
 
-        @media screen and (min-width: 1024px) {
-            right: -4.5rem;
-            top: 9rem;
-        }
+    @media screen and (min-width: 1024px) {
+        right: -4.5rem;
+        top: 9rem;
+    }
 }
 
 .share-menu-active::after {
