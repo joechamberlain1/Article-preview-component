@@ -39,26 +39,26 @@
           </div>
         </div>
         <div class="avatar-button">
-          <button class="share-button" aria-label="Share article">
+          <button aria-expanded="false" aria-controls="share-menu" id="share-toggle">
             <img class="share-button-image" src="images/icon-share.svg" alt="Share button"/>
           </button> 
         </div>    
       </div>
-      <div class="share-menu">
+      <div class="share-menu" id="share-menu" hidden>
         <ul class="share-menu-list">
           <li class="share-menu-list-item">SHARE</li>
           <li class="share-menu-list-item">
-            <a href="#">
+            <a href="#" tabindex="-1">
               <img src="images/icon-facebook.svg" alt="Facebook logo">
             </a>
           </li>
           <li class="share-menu-list-item">
-            <a href="#">
+            <a href="#" tabindex="-1">
               <img src="images/icon-twitter.svg" alt="Twitter logo">
             </a>
           </li>
           <li class="share-menu-list-item">
-            <a href="#">
+            <a href="#" tabindex="-1">
               <img src="images/icon-pinterest.svg" alt="Pintrest logo">
             </a>
           </li>

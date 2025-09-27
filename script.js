@@ -1,17 +1,16 @@
-const button = document.querySelector('.share-button');
-const shareMenu = document.querySelector('.share-menu');
-const buttonIcon = document.querySelector('.share-button-image');
+  const toggleBtn = document.getElementById('share-toggle');
+  const shareMenu = document.getElementById('share-menu');
 
-// Define image sources for easier maintenance
-const defaultIcon = 'images/icon-share.svg';
-const activeIcon = 'images/icon-active.svg';
-
-button.addEventListener('click', () => {
-  // Toggle a single, descriptive state class
-  const isActive = shareMenu.classList.toggle('share-menu-active');
-
-  shareMenu.classList.toggle('share-menu');
-
-  // Use the component's state to determine the icon
-  buttonIcon.src = isActive ? activeIcon : defaultIcon;
-});
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+    if (isExpanded) {
+      shareMenu.hidden = true; // hides from all users and assistive tech
+      // Remove from tab order
+      shareMenu.querySelectorAll('a').forEach(link => link.tabIndex = -1);
+    } else {
+      shareMenu.hidden = false;
+      // Restore tab order
+      shareMenu.querySelectorAll('a').forEach(link => link.tabIndex = 0);
+    }
+  });
