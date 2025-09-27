@@ -17,6 +17,7 @@
   </style>
 </head>
 <body>
+  <main>
   <div class="container">
       <img src="images/drawers.jpg" class="image-bookcase" alt="bookcase"/>
     <div class="text">
@@ -25,10 +26,9 @@
       <p>Ever been in a room and felt like something was missing? Perhaps 
       it felt slightly bare and uninviting. I've got some simple tips 
       to help you make any room feel complete.</p>
-    
       <div class="avatar">
         <div class="avatar-info">
-          <img class="avatar-image" src="images/avatar-michelle.jpg" width="40" height="40"/>
+          <img class="avatar-image" alt="Michelle's avatar" src="images/avatar-michelle.jpg" width="40" height="40"/>
           <div class="avatar-text">
             <div class="avatar-name">
               Michelle Appleton
@@ -39,21 +39,34 @@
           </div>
         </div>
         <div class="avatar-button">
-          <button class="share-button">
-            <img class="share-button-image" src="images/icon-share.svg" />
+          <button class="share-button" aria-label="Share article">
+            <img class="share-button-image" src="images/icon-share.svg" alt="Share button"/>
           </button> 
         </div>    
       </div>
       <div class="share-menu">
         <ul class="share-menu-list">
           <li class="share-menu-list-item">SHARE</li>
-          <li class="share-menu-list-item"><img src="images/icon-facebook.svg" alt="facebook"></li>
-          <li class="share-menu-list-item"><img src="images/icon-twitter.svg" alt="twitter"></li>
-          <li class="share-menu-list-item"><img src="images/icon-pinterest.svg" alt="pintrest"></li>
+          <li class="share-menu-list-item">
+            <a href="#">
+              <img src="images/icon-facebook.svg" alt="Facebook logo">
+            </a>
+          </li>
+          <li class="share-menu-list-item">
+            <a href="#">
+              <img src="images/icon-twitter.svg" alt="Twitter logo">
+            </a>
+          </li>
+          <li class="share-menu-list-item">
+            <a href="#">
+              <img src="images/icon-pinterest.svg" alt="Pintrest logo">
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </div>
     <script src="script.js"></script>
+  </main>
 </body>
 </html>
